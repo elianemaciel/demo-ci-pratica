@@ -65,11 +65,6 @@ Ou seja, você irá configurar um servidor de CI na sua própria cópia do repos
 
 #### Passo 2
 
-Clone o repositório para sua máquina local, usando o seguinte comando (onde `<USER>` deve ser substituído pelo seu usuário no GitHub):
-
-```bash
-git clone https://github.com/<USER>/demo-ci.git
-```
 
 Em seguida, copie o código a seguir para um arquivo com o seguinte nome: `.github/workflows/actions.yaml`. Isto é, crie diretórios `.github` e depois `workflows` e salve o código abaixo no arquivo `actions.yaml`.
 
