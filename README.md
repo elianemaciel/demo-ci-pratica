@@ -16,9 +16,11 @@ O Github Actions permite executar programas externos assim que determinados even
     <img width="70%" src="https://user-images.githubusercontent.com/7620947/110053018-50f77500-7d37-11eb-9ca1-3de609b93584.png" />
 </p>
 
-## Programa de Exemplo
+## Tarefa #1:
+### Criar o programa exemplo
 
-Para ilustrar o uso do servidor de CI, vamos usar um programa Java muito simples, que já foi criado e está disponível neste mesmo repositório ([Calculadora.java](https://github.com/aserg-ufmg/demo-ci/blob/main/src/main/java/br/ufmg/dcc/Calculadora.java)):
+- Crie um repositório
+- Crie o programa em java
 
 ```java
 public class Calculadora {
@@ -32,8 +34,7 @@ public class Calculadora {
   }
 }
 ```
-
-Quando chegar um PR no repositório, o servidor de CI vai automaticamente realizar um _build_ desse programa e rodar o seguinte teste de unidade (também já disponível no repositório, veja em [CalculadoraTest.java](https://github.com/aserg-ufmg/demo-ci/blob/main/src/test/java/br/ufmg/dcc/CalculadoraTest.java)):
+- Crie os testes unitários
 
 ```java
 public class CalculadoraTest {
@@ -54,7 +55,7 @@ public class CalculadoraTest {
 }
 ```
 
-## Tarefa #1: Configurar o GitHub Actions
+## Tarefa #2: Configurar o GitHub Actions
 
 #### Passo 1
 
@@ -130,13 +131,13 @@ Você pode acompanhar o status dessa execução clicando na aba Actions do seu r
     <img width="80%" src="https://user-images.githubusercontent.com/7620947/110059807-b8b3bd00-7d43-11eb-9e57-e6ba1fa3457a.png" />
 </p>
 
-## Tarefa #2: Criando um PR com bug
+## Tarefa #3: Criando um PR com bug
 
 Para finalizar, vamos introduzir um pequeno bug no programa de exemplo e enviar um PR, para mostrar que ele será "barrado" pelo processo de integração (isto, o nosso teste vai "detectar" o bug e falhar).
 
 #### Passo 1
 
-Introduza um pequeno bug na função `soma` do arquivo [src/main/java/br/ufmg/dcc/Calculadora.java](https://github.com/rodrigo-brito/roteiro-github-actions/blob/main/src/main/java/br/ufmg/dcc/Calculadora.java). Por exemplo, basta alterar a linha 6, alterando o retorno da função para `x + y + 1`, como apresentado abaixo.
+Introduza um pequeno bug na função `soma` do arquivo. Por exemplo, basta alterar a linha 6, alterando o retorno da função para `x + y + 1`, como apresentado abaixo.
 
 ```diff
 --- a/src/main/java/br/ufmg/dcc/Calculadora.java
